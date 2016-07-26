@@ -1,0 +1,23 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Reflection;
+using System.Text;
+
+class Solution {
+    static void Main(String[] args) {
+        int n = Convert.ToInt32(Console.ReadLine());
+        for (int i = 0; i < n; i++) {
+            string[] arr_temp_1 = Console.ReadLine().Split(' ');
+            int[] arr_1 = Array.ConvertAll(arr_temp_1,Int32.Parse);
+//            StringBuilder sb = new StringBuilder();            
+//            for (int j = 2; j < arr_1.Length; j++){
+//                sb.Append(arr_1[j]+1);
+//                sb.Append(" ");
+//            }            
+            int x = arr_1[2] - arr_1[0] + arr_1[2];
+            int y = arr_1[3] - arr_1[1] + arr_1[3];          
+            Console.WriteLine(x+ " " + y);
+        }
+    }
+}
